@@ -1,0 +1,84 @@
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/cupertino/ui.css" />
+
+<title>Playlist</title>
+</head>
+<body>
+<div class="page980">
+
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">Top artists</a></li>
+			<li><a href="#tabs-2">Meine Playlisten</a></li>
+			<li><a href="#tabs-3">Konfiguration</a></li>
+		</ul>
+		<div id="tabs-1">
+		bitte warten Sie
+		</div>
+		<div id="tabs-2">
+			
+			
+			<div id="accordion" class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons" style="width:600px;">
+				<h3 class="ui-accordion-header ui-helper-reset ui-state-active ui-corner-top"><a href="#">Party beim Torsten im Büro - (17.01.11)</a></h3>
+				<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active">
+									
+					<div id="songs" class="clearfix">
+						{% if plist %}
+							<ul>
+							{% for pentry in plist %}
+								<li>
+									<div class="clearfix">
+										<div class="grid ui-state-default ui-corner-all">
+											<span class="ui-icon ui-icon-trash remove">Remove</span>
+										</div>
+										<div class="grid" rel="{{pentry.id}}">{{pentry.title}}</div>
+									</div>
+								</li>
+							{% endfor %}
+							</ul>
+						{% endif %}				
+					</div>
+					
+<div id="u833097_6" class="plugin_example"><fb:like font="" action="recommend" show_faces="true" href="http://artportus.de/" class=" fb_edge_widget_with_comment fb_iframe_widget"><span><iframe scrolling="no" id="f3d69a56d484fb2" name="f2cdbe04754ee46" style="border: medium none; overflow: hidden; height: 24px; width: 450px;" title="Like this content on Facebook." class="fb_ltr" src="http://www.facebook.com/plugins/like.php?action=recommend&amp;api_key=113869198637480&amp;channel_url=http%3A%2F%2Fstatic.ak.fbcdn.net%2Fconnect%2Fxd_proxy.php%23cb%3Dfe135191d90434%26origin%3Dhttp%253A%252F%252Fdevelopers.facebook.com%252Ff157d41c1acdbe4%26relation%3Dparent.parent%26transport%3Dpostmessage&amp;href=http%3A%2F%2Flocalhost%3A8000%2Fgadget%2F&amp;layout=standard&amp;locale=de_DE&amp;node_type=link&amp;sdk=joey&amp;show_faces=true&amp;width=450"></iframe></span></fb:like></div>						
+				</div>
+				<h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"><a href="#">Party bei Fred - (02.04.2010)</a></h3>
+				<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+					<p>
+					Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+					et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+					faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+					mauris vel est.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="tabs-3">
+		<h3>Konfiguration Ihrer Anwendung</h3>
+		</div>
+	</div>
+</div>	
+
+
+{% comment %}
+	<ul>
+	{% for page in results %}
+	<li><a href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
+	{% endfor %}
+	</ul>
+{% endcomment %}
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">
+var _g = _g || {};
+_g.data = {{ jsonData|safe }}
+</script>
+<script type="text/javascript" src="/static/js/custom.js"></script>		
+</body>
+</html>
+
+
