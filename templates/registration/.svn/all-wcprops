@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/9486/djangoproject.com/django_website/templates/registration
+END
+registration_form.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/9073/djangoproject.com/django_website/templates/registration/registration_form.html
+END
+activate.html
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/6064/djangoproject.com/django_website/templates/registration/activate.html
+END
+activation_email_subject.txt
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/7369/djangoproject.com/django_website/templates/registration/activation_email_subject.txt
+END
+registration_complete.html
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/6064/djangoproject.com/django_website/templates/registration/registration_complete.html
+END
+activation_email.txt
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/8925/djangoproject.com/django_website/templates/registration/activation_email.txt
+END
+login.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/6064/djangoproject.com/django_website/templates/registration/login.html
+END
+logout.html
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/6064/djangoproject.com/django_website/templates/registration/logout.html
+END
+base.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/6064/djangoproject.com/django_website/templates/registration/base.html
+END
+password_reset_email.html
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/9486/djangoproject.com/django_website/templates/registration/password_reset_email.html
+END
