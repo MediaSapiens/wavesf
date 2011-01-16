@@ -1,0 +1,31 @@
+{% extends "example_base.html" %}
+{% block extra_head %}
+	<!-- socialize.js script should only be included once -->
+	<script type="text/javascript" src="http://cdn.gigya.com/js/socialize.js?apiKey={{api_key}}"></script>
+	<script type="text/javascript">
+	var conf=
+	{
+		APIKey: '{{api_key}}'
+		,enabledProviders: 'facebook,twitter,blogger,livejournal',
+	}
+	</script>
+{% endblock %}
+
+{% block body %}
+<script type="text/javascript">
+var login_params=
+{
+	useHTML: 'true'
+	,showTermsLink: 'false'
+	,height: 85
+	,width: 330
+	,containerID: 'componentDiv'
+	,buttonsStyle: 'fullLogo'
+	,redirectURL:'{% url gigya_login_return %}',
+}
+</script>
+<div id="componentDiv"></div>
+<script type="text/javascript">
+   gigya.services.socialize.showLoginUI(conf,login_params);
+</script>
+{% endblock %}

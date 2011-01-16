@@ -10,6 +10,11 @@
 <title>Playlist</title>
 </head>
 <body>
+	{% if user.is_authenticated %}
+	    <a href="/accounts/logout/">Log out </a>
+	{% else %}
+	    <a href="/accounts/login/">Log in </a>
+	{% endif %}
 <div class="page980">
 
 	<div id="tabs">
