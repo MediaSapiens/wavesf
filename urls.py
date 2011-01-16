@@ -12,12 +12,12 @@ urlpatterns = patterns('',
 	('^', include('gadget.urls')),
     (r'^admin/', include(admin.site.urls)),
 	#(r'^gadget/', include('gadget.urls')),
-	#(r'^accounts/', include('registration.backends.default.urls')),
+	(r'^accounts/', include('registration.backends.default.urls')),
 	
 	(r'^static/(?P<path>.*)$', 'django.views.static.serve',{'document_root': settings.MEDIA_ROOT}),
 	#(r'^auth/', include('gigyauth.urls')),
 	#login
 	#(r'^accounts/login/$', 'django.contrib.auth.views.login', {'template_name': 'login.html'}),
 	#(r'^accounts/', include('accounts.urls')),
-	(r'^accounts/', include('userena.urls')),
+	#(r'^accounts/', include('userena.urls')),
 )

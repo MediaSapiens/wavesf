@@ -26,6 +26,8 @@ from gadget.models import Playlist
 from django.core import serializers
 from django.utils.html import strip_tags, urlquote
 
+from annoying.decorators import render_to
+
 API_KEY = '81954117af67fe8543204f45fa0717df'
 COUNTRY = 'germany'
 
@@ -74,13 +76,14 @@ def delete(request):
 
 	return HttpResponse()
 
-
+@render_to('default.html')
 def getCountyTopArtists(request):
 	plist = Playlist.objects.all()
 	result = TopArtiests(COUNTRY)
 	jsonResult = result.get_data()
     #logging.debug(jsonResult)
-	return render_to_response('default.html', { 'jsonData': jsonResult, 'plist': plist})
+	#return render_to_response('default.html', { 'jsonData': jsonResult, 'plist': plist})
+	return { 'jsonData': jsonResult, 'plist': plist}
 
 	
 def get_plist(request):

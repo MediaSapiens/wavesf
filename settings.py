@@ -28,11 +28,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'djangotoolbox',
-	#'registration',
+	'registration',
 	'gadget',
-	'easy_thumbnails',
-	'guardian',
-	'userena',
+	#'easy_thumbnails',
+	#'guardian',
+	#'userena',
     # djangoappengine should come last, so it can override a few manage.py commands
     'djangoappengine',
 )
@@ -41,6 +41,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+	'lsettings.disable.DisableCSRF'
 )
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.load_template_source',
@@ -49,6 +50,7 @@ TEMPLATE_LOADERS = (
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
+	'django.core.context_processors.auth',
     'django.core.context_processors.request',
     'django.core.context_processors.media',
 )
@@ -68,7 +70,7 @@ LANGUAGES = (('de', 'German'),
              ('en', 'English'))
 USE_I18N = True
 
-SITE_ID = 1
+SITE_ID = 3
 
 #============== APPS EXT====================
 
@@ -78,10 +80,10 @@ GIGYAUTH_API_KEYS = '2_qIePKPJ_T-NIHQ0_JpdNrhUgj7-B7YmCkeqIus1U68S8ElsLsN5BQOtTn
 #'2_ZVBWfZFQwm2ovDUJ1lJWtQKq7J1Gr3nCMfC2_g3FNiYd37lhrtEot6T4M1JianRD'
 
 AUTHENTICATION_BACKENDS = (
-    'userena.UserenaAuthenticationBackend',
-    'guardian.backends.ObjectPermissionBackend',
+    #'userena.UserenaAuthenticationBackend',
+    #'guardian.backends.ObjectPermissionBackend',
     'django.contrib.auth.backends.ModelBackend',
-	'gigyauth.backends.gigyaoauth.GigyaBackend',
+	#'gigyauth.backends.gigyaoauth.GigyaBackend',
 )
 AUTH_PROFILE_MODULE = False
 USERENA_MUGSHOT_GRAVATAR = False
@@ -90,7 +92,7 @@ LOGIN_REDIRECT_URL = '/'
 ANONYMOUS_USER_ID = -1
 
 #registration
-#ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
+ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
 
 
 
